@@ -1,4 +1,6 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');:root {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -24,15 +26,24 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  width: 100%;
+  margin: 0; 
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+
 }
 
 button {
@@ -60,7 +71,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #ee0d0d;
   }
   button {
     background-color: #f9f9f9;

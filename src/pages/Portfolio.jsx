@@ -1,8 +1,8 @@
+import CarouselWithInfo from "../components/projects-display/CarouselWithInfo"
 export default function Portfolio() {
-    
-    return (
-        <div>
-            <h1>My Portfolio</h1>
-        </div>
-    )
+  return (
+    <div>
+      <CarouselWithInfo/>
+    </div>
+  );
 }

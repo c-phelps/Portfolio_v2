@@ -1,0 +1,28 @@
+
+.fadeIn {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: rgb(212, 10, 10);
+}
+
+.detailsBody {
+  max-width: 650px;
+}
