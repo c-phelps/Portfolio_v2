@@ -1,0 +1,6 @@
+.contactMeContainer {    
+  background-color: var(--color-background-contact-me);
+  padding: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}

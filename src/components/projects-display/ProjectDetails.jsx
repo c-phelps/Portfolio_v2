@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import styles from "./ProjectDetails.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -38,7 +38,7 @@ const ProjectDetails = ({ project }) => {
           {project.technologies.join(", ")}
         </p>
       </div>
-      <div style={{ textAlign: "center" }}>
+      <div className={styles.detailsLinks}>
         <a href={`${project.link}`} target="_blank">
           {project.name}
         </a>

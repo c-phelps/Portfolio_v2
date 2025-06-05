@@ -1,13 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');:root {
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  --color-background: #9a8873;
+  --color-background-hero: #37423d;
+  --color-background-about-me: #37423d;
+  --color-background-projects: #755540;
+  --color-background-contact-me: #37423d;
+  --color-background-footer: #171614;
+  --color-background-header: #171614;
+  --color-text: #f5f5f5;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color-text);
+  background-color: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,35 +25,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #000000;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #db1818;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   /* display: flex; */
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
   width: 100%;
-  margin: 0; 
+  margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://www.transparenttextures.com/patterns/sandpaper.png");
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.5em;
   line-height: 1.1;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Merriweather', serif;
-
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Merriweather", serif;
 }
 
 button {
@@ -65,7 +90,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -76,4 +101,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

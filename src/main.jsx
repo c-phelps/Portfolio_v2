@@ -5,7 +5,6 @@ import './index.css'
 import App from './App.jsx'
 import Error from './pages/Error.jsx';
 import Portfolio from './pages/Portfolio.jsx';
-import Resume from './pages/Resume.jsx';
 
 
 const router = createBrowserRouter([
@@ -16,12 +15,8 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Portfolio /> //visually appealing aboutme page
+        element: <Portfolio />
       },
-      {
-        path: "/Resume",
-        element: <Resume />
-      }
     ],
   }
 ])

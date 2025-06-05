@@ -1,0 +1,7 @@
+.footerContainer {
+  max-width: 100%;
+  background-color: var(--color-background-footer);
+  min-height: 100px;
+  padding: 2rem;
+  margin-top: 4rem;
+}
