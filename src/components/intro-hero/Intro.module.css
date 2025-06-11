@@ -1,5 +1,6 @@
 .intro {
   height: 100vh;
+  position: relative;
   padding: 2rem;
   background-color: var(--color-background-hero);
   display: flex;
@@ -11,9 +12,14 @@
 }
 
 .navigation {
-  padding: 1rem;
+  background-color: var(--color-background-hero);
+  padding: 0.5rem;
   margin: 1rem;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
+  position: sticky;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
 }

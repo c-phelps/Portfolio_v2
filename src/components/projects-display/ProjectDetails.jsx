@@ -20,7 +20,7 @@ const ProjectDetails = ({ project }) => {
 
   return (
     <div className={styles.detailsBody}>
-      <h2>
+      <h3>
         <Typewriter
           key={`${project.name}-${project.role}`}
           words={[`${project.name} — ${project.role}`]}
@@ -30,7 +30,7 @@ const ProjectDetails = ({ project }) => {
           typeSpeed={50}
           deleteSpeed={0}
         />
-      </h2>
+      </h3>
       <div className={`${styles.fadeIn} ${showDetails ? styles.visible : ""}`}>
         <p>{project.about}</p>
         <p>
@@ -39,10 +39,19 @@ const ProjectDetails = ({ project }) => {
         </p>
       </div>
       <div className={styles.detailsLinks}>
-        <a href={`${project.link}`} target="_blank">
+        <a href={`${project.link}`} className={styles.toolTip} target="_blank">
           {project.name}
+          <span className={styles.tooltipText}>
+            Note: Render deployments may take a few moments to load due to hosting limitations.
+          </span>
         </a>
-        <a href={`${project.link}`} target="_blank" style={{ marginLeft: "20px" }}>
+        <a
+          href={`${project.link}`}
+          className={styles.toolTip}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ marginLeft: "20px" }}
+        >
           <FontAwesomeIcon icon={faGithub} />
         </a>
       </div>

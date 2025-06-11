@@ -2,8 +2,14 @@
   width: 100%;
   max-width: 900px;
   background-color: var(--color-background-projects);
-  padding: 2rem; 
+  padding: 2rem;
   margin-top: 4rem;
   margin-bottom: 2rem;
-  /* box-sizing: border-box; */
+}
+
+
+@media (max-width: 768px)  {
+  .projectBlock {
+    box-sizing: border-box;
+  }
 }

@@ -3,6 +3,7 @@ import styles from "./Intro.module.css";
 
 const Intro = () => {
   return (
+    <>
     <section className={`${styles.intro} container`}>
       <h1>
         <Typewriter words={["Chris Phelps - Full-Stack Developer"]} loop={1} typeSpeed={60} cursor cursorStyle="_" />
@@ -11,6 +12,7 @@ const Intro = () => {
         I build scalable, functional web apps using React, Node.js, MongoDB, and SQL - with design that supports clarity
         and usability.
       </p>
+    </section>
       <nav className={styles.navigation}>
         <a href="#about">
           About Me
@@ -22,7 +24,7 @@ const Intro = () => {
           Contact Me
         </a>
       </nav>
-    </section>
+    </>
   );
 };
 

@@ -14,21 +14,23 @@ const AutoCarousel = ({ index, setIndex, projects }) => {
   const elapsedRef = useRef(0);
 
   const DURATION = 6000;
-  // initial mount
+  // initial mount effect
+  // useEffect(() => {
+  //   resetProgressBar();
+  //   startProgressBar(DURATION);
+  //   startTimeRef.current = Date.now();
+
+  //   timeoutRef.current = setTimeout(() => {
+  //     setIndex((current) => (current + 1) % projects.length);
+  //       resetTimerAndProgress();
+  //   }, DURATION);
+
+  //   return () => clearTimeout(timeoutRef.current);
+  // }, []);
+
+  // state change effect
   useEffect(() => {
-    resetProgressBar();
-    startProgressBar(DURATION);
-    startTimeRef.current = Date.now();
-
-    timeoutRef.current = setTimeout(() => {
-      setIndex((current) => (current + 1) % projects.length);
-      elapsedRef.current = 0;
-    }, DURATION);
-
-    return () => clearTimeout(timeoutRef.current);
-  }, []);
-
-  useEffect(() => {
+    clearTimeout(timeoutRef.current);
     if (!paused) {
       startTimeRef.current = Date.now() - elapsedRef.current;
 
@@ -39,8 +41,6 @@ const AutoCarousel = ({ index, setIndex, projects }) => {
         resetTimerAndProgress();
       }, DURATION - elapsedRef.current);
     } else {
-      clearTimeout(timeoutRef.current);
-
       if (startTimeRef.current) {
         elapsedRef.current = Date.now() - startTimeRef.current;
       }
@@ -89,29 +89,39 @@ const AutoCarousel = ({ index, setIndex, projects }) => {
     setIndex(newIndex);
     resetTimerAndProgress();
   };
-  
+
   return (
     <div className={styles.carousel} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      {projects.map((project, i) => {
-        let className = styles.image;
-        let onClick = null;
-        // if the project being processed by map method is the current index, display it on top with no translate
-        // if the project being processed is next or prev, slide them to the left or right and change their display
-        // default (above) is for the project to be invisible (opacity 0, zIndex 0)
-        if (i === index) {
-          className += ` ${styles.active}`;
-        } else if (i === prevIndex) {
-          className += ` ${styles.prev}`;
-          onClick = () => handleClick(prevIndex);
-        } else if (i === nextIndex) {
-          className += ` ${styles.next}`;
-          onClick = () => handleClick(nextIndex);
-        }
+      <div className={styles.imageContainer}>
+        {projects.map((project, i) => {
+          let className = styles.image;
+          let onClick = null;
+          // if the project being processed by map method is the current index, display it on top with no translate
+          // if the project being processed is next or prev, slide them to the left or right and change their display
+          // default (above) is for the project to be invisible (opacity 0, zIndex 0)
+          if (i === index) {
+            className += ` ${styles.active}`;
+          } else if (i === prevIndex) {
+            className += ` ${styles.prev}`;
+            onClick = () => handleClick(prevIndex);
+          } else if (i === nextIndex) {
+            className += ` ${styles.next}`;
+            onClick = () => handleClick(nextIndex);
+          }
 
-        return <img key={i} src={project.image} alt={`slide ${i}`} className={className} onClick={onClick} />;
-      })}
+          return <img key={i} src={project.image} alt={`slide ${i}`} className={className} onClick={onClick} />;
+        })}
+      </div>
 
-      <div className={styles.progressBar} ref={progressRef}></div>
+      <div className={styles.progressContainer}>
+        <div className={styles.progressTrack}></div>
+        <div className={styles.progressBar} ref={progressRef}></div>
+        <div className={styles.indicators}>
+          {projects.map((_, i) => (
+            <div key={i} className={i === index ? styles.full : styles.empty} onClick={() => handleClick(i)} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

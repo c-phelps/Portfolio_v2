@@ -1,4 +1,3 @@
-
 .fadeIn {
   opacity: 0;
   transform: translateY(10px);
@@ -14,10 +13,36 @@
   max-width: 800px;
 }
 
-.detailsLinks a {
+.toolTip {
   color: var(--color-background);
   text-decoration: underline;
+  position: relative;
 }
-.detailsLinks a:hover {
+.toolTip:hover {
   color: var(--color-link-hover);
+}
+
+.tooltipText {
+  visibility: hidden;
+  width: 240px;
+  background-color: #333;
+  color: var(--color-text);
+  text-align: left;
+  padding: 0.5rem;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 10;
+  bottom: -250%; /* position above the link */
+  left: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.toolTip:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
 }
