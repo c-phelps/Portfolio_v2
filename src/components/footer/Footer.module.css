@@ -1,7 +1,12 @@
 .footerContainer {
   max-width: 100%;
+  font-size: 70%;
   background-color: var(--color-background-footer);
-  min-height: 100px;
-  padding: 2rem;
+  min-height: 25px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   margin-top: 4rem;
+  text-align: center;
 }

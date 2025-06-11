@@ -1,11 +1,11 @@
-
 import styles from "./Footer.module.css";
 
-const Footer = () => { 
+const Footer = () => {
   return (
     <div className={styles.footerContainer}>
-      <p>Footer</p>
+      <p>© 2025 Chris Phelps. All rights reserved.</p>
+      <p>Created with patience, effort, and a commitment to learning.</p>
     </div>
   );
-}
- export default Footer;
+};
+export default Footer;

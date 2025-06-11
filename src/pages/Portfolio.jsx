@@ -8,7 +8,7 @@ import Navbar from "../components/navbar/Navbar";
 export default function Portfolio() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Intro />
       <AboutMe />
       <CarouselWithInfo />

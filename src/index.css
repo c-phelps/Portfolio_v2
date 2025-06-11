@@ -6,14 +6,18 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  --color-background: #9a8873;
-  --color-background-hero: #37423d;
-  --color-background-about-me: #37423d;
-  --color-background-projects: #755540;
-  --color-background-contact-me: #37423d;
+  --color-background: #171614;
+  --color-background-hero: #171614;
+  --color-background-about-me: #5a4b47 ;
+  --color-background-projects: #7b4f30 ;
+  --color-background-contact-me: #5a4b47  ;
+
   --color-background-footer: #171614;
-  --color-background-header: #171614;
-  --color-text: #f5f5f5;
+  --color-background-progress: #171614;
+
+  --color-text: #f4f1ea;
+  --color-link: #6B8E23 ;
+  --color-link-hover: #cc7a4d ;
 
   color-scheme: light dark;
   color: var(--color-text);
@@ -32,15 +36,17 @@
 
 a {
   font-weight: 500;
-  color: #000000;
+  color: var(--color-link);
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #db1818;
+  color: var(--color-link-hover);
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -52,11 +58,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)),
+
+  /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2)),
     url("https://www.transparenttextures.com/patterns/sandpaper.png");
   background-repeat: repeat;
-  background-size: auto;
+  background-size: auto; */
 }
 
 h1 {
@@ -90,15 +96,22 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+    max-width: 100%;
   }
-  a:hover {
-    color: #ee0d0d;
+
+  h1 {
+    font-size: 1.8em;
   }
-  button {
-    background-color: #f9f9f9;
+
+  h2 {
+    font-size: 1.5em;
   }
-} */
+
+  p {
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+}

@@ -3,7 +3,7 @@ import styles from "./AboutMe.module.css";
 const Intro = () => {
   return (
     <div className={`${styles.aboutMeContainer} container`}>
-      <h2 id="AboutMe">About Me</h2>
+      <h2 id="about">About Me</h2>
       <p>
         I’m a <span className={styles.glowPulseGold}>full-stack web developer</span> with a foundation in software implementation and a Full-Stack Web
         Development Certificate from UNC–Chapel Hill.

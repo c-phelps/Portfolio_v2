@@ -11,9 +11,17 @@ const Intro = () => {
         I build scalable, functional web apps using React, Node.js, MongoDB, and SQL - with design that supports clarity
         and usability.
       </p>
-      <a href="#projects" className={styles.ctaButton}>
-        View My Work
-      </a>
+      <nav className={styles.navigation}>
+        <a href="#about">
+          About Me
+        </a>
+        <a href="#projects">
+          View My Work
+        </a>
+        <a href="#contact">
+          Contact Me
+        </a>
+      </nav>
     </section>
   );
 };

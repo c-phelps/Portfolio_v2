@@ -1,6 +1,6 @@
 .navbarContainer {
   max-width: 100%;
-  background-color: var(--color-background-header);
-  min-height: 100px;
+  /* background-color: var(--color-background-header); */
+  min-height: 50px;
   padding: 2rem;
 }
