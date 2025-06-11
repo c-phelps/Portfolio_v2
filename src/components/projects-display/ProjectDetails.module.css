@@ -14,6 +14,10 @@
   max-width: 800px;
 }
 
-.detailsLinks {
-
+.detailsLinks a {
+  color: var(--color-background);
+  text-decoration: underline;
+}
+.detailsLinks a:hover {
+  color: var(--color-link-hover);
 }

@@ -1,11 +1,11 @@
-.contactMeContainer {    
+.contactMeContainer {
   background-color: var(--color-background-contact-me);
   padding: 2rem;
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
-.contactMeInnerContainer{
+.contactMeInnerContainer {
   background-color: var(--color-background-contact-me-inner);
   padding: 2rem;
 }
@@ -14,14 +14,20 @@
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  max-width: 90%; 
-  word-wrap: break-word; 
+  max-width: 90%;
+  word-wrap: break-word;
 }
 
 @media (max-width: 768px) {
   .contactList {
-    max-width: 100%; 
-    padding: 0 1rem; 
+    max-width: 100%;
+    padding: 0 1rem;
     font-size: 0.95rem;
   }
+}
+.contactList a {
+  /* color: var(--color-background); */
+}
+.contactList a:hover {
+  color: var(--color-link-hover);
 }

@@ -8,16 +8,17 @@
   font-weight: 400;
   --color-background: #171614;
   --color-background-hero: #171614;
-  --color-background-about-me: #5a4b47 ;
+  --color-background-about-me: #42352a ;
   --color-background-projects: #7b4f30 ;
-  --color-background-contact-me: #5a4b47  ;
+  --color-background-contact-me: #42352a  ;
 
   --color-background-footer: #171614;
   --color-background-progress: #171614;
 
   --color-text: #f4f1ea;
-  --color-link: #6B8E23 ;
-  --color-link-hover: #cc7a4d ;
+  /* --color-link: #446822 ; */
+  --color-link: #cc7a4d ;
+  --color-link-hover: #f4f1ea ;
 
   color-scheme: light dark;
   color: var(--color-text);

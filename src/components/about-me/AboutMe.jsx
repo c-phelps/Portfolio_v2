@@ -22,7 +22,7 @@ const Intro = () => {
         I’m currently seeking opportunities to grow as a developer, contribute to meaningful products, and collaborate
         with creative teams.
       </p>
-      <p>Outside of coding, I enjoy chess and am an avid fan of <span className={styles.glowPulseRed}>Liverpool FC</span>.</p>
+      <p>Outside of coding, I enjoy chess and am an avid fan of <span className={styles.glowPulseGold}>Liverpool FC</span>.</p>
     </div>
   );
 };
