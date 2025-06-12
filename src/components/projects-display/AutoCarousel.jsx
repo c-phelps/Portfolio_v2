@@ -91,8 +91,8 @@ const AutoCarousel = ({ index, setIndex, projects }) => {
   };
 
   return (
-    <div className={styles.carousel} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      <div className={styles.imageContainer}>
+    <div className={styles.carousel}>
+      <div className={styles.imageContainer} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
         {projects.map((project, i) => {
           let className = styles.image;
           let onClick = null;
